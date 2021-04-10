@@ -45,6 +45,7 @@ img {
   --link-footer: rgba(255, 255, 255, 0.6);
   --hero-bg: rgba(47, 48, 58, 0.4);
   --social-link: #afb1b8;
+  --modal-bg: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -609,9 +610,11 @@ address {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 120;
+  background-color: var(--modal-bg);
 }
 
-.is-hiddden {
+.backdrop.is-hiddden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -620,7 +623,7 @@ address {
 .modal {
   width: 528px;
   height: 581px;
-  background-color: royalblue;
+  background-color: var(--main-bg-text-color);
   text-align: right;
   border-radius: 4px;
 
@@ -633,10 +636,19 @@ address {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--main-bg-text-color);
-  border-radius: 4px;
+  min-width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* .is-hidden .modal {
+  transform: translate(100%, 100%) scale(0.2);
+} */

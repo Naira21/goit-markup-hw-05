@@ -51,15 +51,7 @@
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
           <button type="button" class="button-order" data-modal-open>Заказать услугу</button>
-
-          <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <p></p>
-            <button class="btn-close" data-modal-close></button>
-          </div>
-          </div>
         </div>
-        <script src="./js/modal.js"></script>
       </section>
       <section class="feature-bg section">
         <div class="container">
@@ -321,6 +313,17 @@
           </ul>           
         </div>
       </div>
-    </footer>    
+    </footer>
+     <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p></p>
+        <button class="btn-close" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons/icons.svg#icon-btn-close" ></use>
+          </svg>
+        </button>
+      </div>
+     </div>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
