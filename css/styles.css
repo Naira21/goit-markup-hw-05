@@ -107,7 +107,6 @@ body {
 
 .nav-list {
   display: flex;
-  margin-right: 331px;
   align-items: center;
   margin-right: auto;
 }
@@ -131,6 +130,7 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
 }
 
 .contacts-link {
@@ -148,6 +148,16 @@ body {
   color: var(--logo-button-color);
 }
 
+.current::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--logo-button-color);
+  position: absolute;
+  bottom: 0px;
+}
 a {
   text-decoration: none;
   color: inherit;
