@@ -46,6 +46,7 @@ img {
   --hero-bg: rgba(47, 48, 58, 0.4);
   --social-link: #afb1b8;
   --modal-bg: rgba(0, 0, 0, 0.2);
+  --activity-title-bg: rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -231,21 +232,11 @@ a {
 ul {
   padding-left: 0px;
 }
-.activity-item {
-  display: flex;
-  justify-content: space-between;
-}
+
 .activity-item:not(:last-child),
 .feature-item:not(:last-child),
 .team-item:not(:last-child) {
   margin-right: 30px;
-}
-.activity-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin: 0;
 }
 
 /*Особенности*/
@@ -283,12 +274,8 @@ ul {
   height: 120px;
   margin-bottom: 30px;
 }
-.activity-bg.section {
-  padding-top: 0;
-}
 
 /*Деятельность*/
-
 .activity-list {
   margin-top: 50px;
   margin-bottom: 0;
@@ -296,11 +283,49 @@ ul {
   display: flex;
 }
 
-.activity-list img {
-  padding-right: 30px;
+.activity-list img:not(:last-child)) {
+  margin-right: 30px;
 }
 .activity-list img:last-child {
   padding-right: 0px;
+}
+
+.activity-bg.section {
+  padding-top: 0;
+}
+
+.activity-item-title {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 0;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: var(--main-bg-text-color);
+  background-color: var(--activity-title-bg);
+  font-weight: 700;
+}
+
+.activity-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin: 0;
+}
+
+.activity-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*Команда*/
