@@ -158,7 +158,7 @@ body {
   color: var(--link-paragraph-color);
   align-items: center;
 
-  transition-property: fill;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -632,6 +632,10 @@ address {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-item + .social-icons-item {
   margin-left: 10px;
@@ -641,6 +645,10 @@ address {
   width: 20px;
   height: 20px;
   fill: var(--social-link);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join .social-icon {
   fill: var(--main-bg-text-color);
@@ -711,7 +719,7 @@ address {
   width: 100%;
   height: 100%;
 
-  transition-property: fill;
+  transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
