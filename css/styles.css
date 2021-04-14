@@ -765,7 +765,12 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .btn-close {
   position: absolute;
   top: 8px;
@@ -786,4 +791,8 @@ address {
 .btn-close:focus {
   background-color: inherit;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.is-hidden .modal {
+  transform: translate(100%, 100%);
 }
